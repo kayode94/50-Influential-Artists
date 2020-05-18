@@ -225,13 +225,14 @@ console.log(artists);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-  if()
+
+function getArtistByIndex(artists, index){
+
 }
-  
-  /**
-//console.log(getArtistByIndex(artists, 9))
-//return ` The artist at index {id}(meaning the objects id) is {name} meaning the objects name)
+
+
+
+
 
 /* Task 4: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -241,21 +242,35 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(artists, index) {
-  let removed = artists.splice()
-  return removed;
-  }
-  
-  /**
 
-//removeArtist(artist, 0)
+function removeArtist(artists, index) { 
+  let removed = artists.indexOf(index);
+  if (removed > -1) {
+      artists.splice(removed, 1);
+  }
+  return artists;
+}
+
+// removeArtist(artists, artists[9]);
+
+
+// console.log(artists);
+
+
+
+
+
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
+
 function lotsOfArt(artists){
-  let newArray = artists.paintings > 100;
-  if(artists.paintings > 100){
-    newArray.push()
+  for(let i = 0; i < artists.length; i++){
+    if(artists[i].paintings > 100){
+      console.log(artists[i]);
+    }
   }
+}
+
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -267,15 +282,16 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(name, years, genre, nationality, bio){
-  artists.push({id: 26, name: "Kay", years: 9, genre: "Gaming", nationality: "Nah", bio: "Yeah right"})
+function addArtist(arr, name, years, genre, nationality, bio){
+  const artist = {id: arr.length + 1, name: name, years: years, genre: genre, nationality: nationality, bio: bio}
+  return arr.push(artist)
 };
   
 
 
-// addArtist();
+// console.log(addArtist(artists, 'Kay', '1994-2020', 'digital', 'Multi-National', 'I am 26 and I love technology. I am studying to become a web developer as well as game designer'));
 
-// console.log(artists);
+
 
 
 
