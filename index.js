@@ -227,8 +227,10 @@ console.log(artists);
 */
 
 function getArtistByIndex(artists, index){
-
+  return `The artist at index ${artists.id} is ${artists.name}`
 }
+
+console.log(getArtistByIndex(artists[8]));
 
 
 
